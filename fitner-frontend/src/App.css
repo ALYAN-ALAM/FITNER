@@ -1,0 +1,21 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  /* padding: 18px 50px 15px 50px; */
+}
+
+.welcome-section {
+  /* background-color: #b5c99a; */
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.welcome-section h1 {
+  color: #2364aa;
+}
+
+.welcome-section p {
+  color: #2364aa;
+}
