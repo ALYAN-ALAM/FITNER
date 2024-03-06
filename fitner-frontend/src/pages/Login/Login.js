@@ -4,13 +4,15 @@ import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import LoginButton from "../../components/Auth/LoginButton";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
+  const navigate = useNavigate();
+  const [loggedIn, setLoggedIn] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -22,6 +24,10 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setLoggedIn(true);
+
+    navigate("/chat");
 
     setLoading(true);
 
