@@ -5,8 +5,10 @@ import HomePage from "./pages/HomePage/HomePage";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/SignUp/Signup";
 import NavBar from "./components/Navbar/NavBar";
+import useStoreUserEffect from "./hooks/useStoreUserEffect.js";
 
 function App() {
+  const userId = useStoreUserEffect();
   return (
     <Router>
       <NavBar />

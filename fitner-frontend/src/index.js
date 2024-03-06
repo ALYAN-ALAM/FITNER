@@ -7,12 +7,14 @@ import { ConvexReactClient } from "convex/react";
 import { ConvexProviderWithAuth0 } from "convex/react-auth0";
 
 const convex = new ConvexReactClient('https://amiable-dodo-916.convex.cloud');
+const authDomain = process.env.REACT_APP_AUTH0_DOMAIN
+const authClientId = process.env.REACT_APP_AUTH0_APP_ID
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
  <Auth0Provider
-    domain="dev-3kvo8gurvbtg3koc.us.auth0.com"
-    clientId="XynpbD6SS2nKJqUiWpwNHdM3cn1qOLNf"
+    domain={authDomain}
+    clientId={authClientId}
     authorizationParams={{
       redirect_uri: window.location.origin
     }}

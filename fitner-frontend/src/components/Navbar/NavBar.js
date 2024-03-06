@@ -3,9 +3,12 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faCode } from "@fortawesome/free-solid-svg-icons";
-
+import { faUser, faCode, faSignOut, faSignIn } from "@fortawesome/free-solid-svg-icons";
+import { useConvexAuth } from "convex/react";
+import LogoutButton from "../Auth/LogoutButton";
 function NavBar() {
+  const { isAuthenticated } = useConvexAuth();
+
   return (
     <>
       <link
@@ -50,6 +53,15 @@ function NavBar() {
                 <FontAwesomeIcon icon={faCode} className="mr-1" />
                 GitHub
               </Nav.Link>
+           { isAuthenticated ? (
+              <LogoutButton />
+            ) : (
+              <Nav.Link href="/login" className="text-white">
+               <LogoutButton/>
+              </Nav.Link>
+            )
+            
+          }
             </Nav>
           </Navbar.Collapse>
         </Container>

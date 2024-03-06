@@ -1,4 +1,4 @@
-import { useUser } from "@clerk/clerk-react";
+import { useAuth0 } from "@auth0/auth0-react";
 import { useConvexAuth } from "convex/react";
 import { useEffect, useState } from "react";
 import { useMutation } from "convex/react";
@@ -6,7 +6,7 @@ import { api } from "../convex/_generated/api";
 
 export default function useStoreUserEffect() {
   const { isAuthenticated } = useConvexAuth();
-  const { user } = useUser();
+  const { user } = useAuth0();
   // When this state is set we know the server
   // has stored the user.
   const [userId, setUserId] = useState(null);
@@ -29,6 +29,6 @@ export default function useStoreUserEffect() {
     return () => setUserId(null);
     // Make sure the effect reruns if the user logs in with
     // a different identity
-  }, [isAuthenticated, storeUser, user?.id]);
+  }, [isAuthenticated, storeUser, user?.sub]);
   return userId;
 }

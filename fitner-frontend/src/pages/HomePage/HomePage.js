@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "./HomePage.css";
 import { useConvexAuth } from "convex/react";
 import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "../../components/Auth/LoginButton";
 const HomePage = () => {
   const { isLoading, isAuthenticated } = useConvexAuth();
   const { user } = useAuth0();
@@ -43,17 +44,15 @@ const HomePage = () => {
        { isAuthenticated ? (
 
         <div>
-            <Link to="/dashboard">
-            <Button variant="primary">Go to Dashboard</Button>
+            <Link to="/">
+            <Button variant="primary">Get AI Reccomnedations</Button>
           </Link>
         </div>
           
         
           
         ) : (
-          <Link to="/login">
-            <Button variant="primary">Get Started</Button>
-          </Link>
+          <LoginButton />
         )}
       </div>
     </Container>
