@@ -57,7 +57,7 @@ function NavBar() {
            { isAuthenticated ? (
               <LogoutButton />
             ) : (
-              <Nav.Link href="/login" className="text-white">
+              <Nav.Link  className="text-white">
                <LoginButton/>
               </Nav.Link>
             )
