@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: "Rubik", "Open Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+}
+
+.welcome-section {
+  padding: 80px;
+  width: 80%;
+  height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome-section h1 {
+  color: #ffffff;
+}
+
+.welcome-section p {
+  color: #ffffff;
+}

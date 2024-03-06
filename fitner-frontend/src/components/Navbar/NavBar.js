@@ -19,24 +19,17 @@ function NavBar() {
             color: #3c6e71 !important;
           }
 
-          .navbar {
-            background-color: #b5c99a !important; 
-          }
+          
         `}
       </style>
-      <Navbar
-        expand="lg"
-        style={{
-          backgroundColor: "#cad2c5",
-        }}
-      >
+      <Navbar expand="lg">
         <Container>
           <Navbar.Brand
             href="/"
             className="d-flex align-items-center text-white font-weight-bold"
             style={{
               fontSize: "2.5rem",
-              fontFamily: "'Montserrat', sans-serif",
+              fontFamily: "'Rubik', 'Montserrat', sans-serif",
             }}
           >
             FITNER
