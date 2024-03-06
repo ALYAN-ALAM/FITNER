@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  background-color: #cad2c5;
+  /* padding: 15px 15px; */
+  font-family: "Rubik", "Open Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+  background-image: url("../public/img/anastase-maragos-9dzWZQWZMdE-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
