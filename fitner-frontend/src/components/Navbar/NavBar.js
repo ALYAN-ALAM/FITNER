@@ -2,7 +2,6 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCode } from "@fortawesome/free-solid-svg-icons";
 
@@ -44,7 +43,7 @@ function NavBar() {
                 About Us
               </Nav.Link>
               <Nav.Link
-                href="https://github.com/"
+                href="https://github.com/ALYAN-ALAM/FITNER"
                 target="_blank"
                 className="text-white"
               >

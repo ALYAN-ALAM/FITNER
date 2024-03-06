@@ -1,8 +1,8 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import Container from "react-bootstrap/Container";
-
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -36,9 +36,11 @@ const HomePage = () => {
           }}
           repeat={Infinity}
         />
-        <Button variant="light" size="lg" active>
-          Get Started!
-        </Button>
+        <Link to="/login">
+          <Button href="../Login" variant="light" size="lg" active>
+            Get Started!
+          </Button>
+        </Link>
       </div>
     </Container>
   );
