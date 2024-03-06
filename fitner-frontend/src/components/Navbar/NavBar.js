@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCode, faSignOut, faSignIn } from "@fortawesome/free-solid-svg-icons";
 import { useConvexAuth } from "convex/react";
 import LogoutButton from "../Auth/LogoutButton";
+import LoginButton from "../Auth/LoginButton";
 function NavBar() {
   const { isAuthenticated } = useConvexAuth();
 
@@ -56,8 +57,8 @@ function NavBar() {
            { isAuthenticated ? (
               <LogoutButton />
             ) : (
-              <Nav.Link href="/login" className="text-white">
-               <LogoutButton/>
+              <Nav.Link  className="text-white">
+               <LoginButton/>
               </Nav.Link>
             )
             
