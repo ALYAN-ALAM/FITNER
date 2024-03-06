@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./Login.css";
 import { Link } from "react-router-dom";
+import LoginButton from "../../components/Auth/LoginButton";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -81,6 +82,7 @@ const Login = () => {
               {loading && <div className="login-loader"></div>}
               Login
             </button>
+            <LoginButton />
           </form>
 
           <div className="login-signup">

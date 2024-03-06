@@ -4,8 +4,12 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-
+import { useConvexAuth } from "convex/react";
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "../../components/Auth/LoginButton";
 const HomePage = () => {
+  const { isLoading, isAuthenticated } = useConvexAuth();
+  const { user } = useAuth0();
   return (
     <Container>
       <div className="welcome-section">
@@ -36,11 +40,20 @@ const HomePage = () => {
           }}
           repeat={Infinity}
         />
-        <Link to="/login">
-          <Button href="../Login" variant="light" size="lg" active>
-            Get Started!
-          </Button>
-        </Link>
+         
+       { isAuthenticated ? (
+
+        <div>
+            <Link to="/">
+            <Button variant="primary">Get AI Reccomnedations</Button>
+          </Link>
+        </div>
+          
+        
+          
+        ) : (
+          <LoginButton />
+        )}
       </div>
     </Container>
   );
